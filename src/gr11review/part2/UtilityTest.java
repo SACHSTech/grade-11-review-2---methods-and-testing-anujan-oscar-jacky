@@ -6,5 +6,5 @@ import org.junit.jupiter.api.Test;
 import gr11review.part2.Utility;
 
 public class UtilityTest{
-  
+    
 }
