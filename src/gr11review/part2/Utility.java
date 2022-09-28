@@ -6,7 +6,8 @@ import java.io.IOException;
 
 public class Utility {
     public static void main(String[] args) {
-        
+        int [][] arrays = {{1, 4, 3}, {4, 3, 2}, {23, 3, 4}};
+        System.out.println(Arrays.deepToString(reverse(arrays)));
     }    
     
     public static String longestWord(String filenametxt) throws IOException{ // takes a file with words and outputs the longest word from it
@@ -82,9 +83,14 @@ public class Utility {
 
                 for (int j = 1; j < inner.length; j++) {
 
-                    if (outer[i + j] != inner [j]) { //until the streak of consecutive values is broken
-                        booleanReturn = false; //make it false
-                    } 
+                    try {
+                        if (outer[i + j] != inner [j]) { //until the streak of consecutive values is broken
+                            booleanReturn = false; //make it false
+                        }
+                    } catch (Exception e) {
+                        booleanReturn = false;
+                        break;
+                    }
 
                 }
 

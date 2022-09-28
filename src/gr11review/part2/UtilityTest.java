@@ -12,11 +12,23 @@ public class UtilityTest{
     int [] onlyTens = {10, 10, 10, 10, 10};
     int [] onlyTensEquals = {};
     int [] tensAtBeginning = {10, 10, 10, 34, 34, 60, 234, 34};
-    int [] tensAtBeginningEquals = {34, 34, 60, 234, 34}
+    int [] tensAtBeginningEquals = {34, 34, 60, 234, 34};
     int [] tensInMiddle = {20, 3, 4, 1, 4, 10, 10, 49, 10};
     int [] tensInMiddleEquals = {20, 3, 4, 1, 4, 49};
     int [] tensInEnd = {2, 2, 4, 234, 1, 10};
     int [] tensInEndEquals = {2, 2, 4, 234, 1};
+
+    int [][] reverseArray = {{1, 4, 3}, {4, 3, 2}, {23, 3, 4}};
+    int [][] reverseArrayEquals = {{4, 3, 23}, {2, 3, 4}, {3, 4, 1}};
+
+    int [] inner1 = {1, 23, 4};
+    int [] outer1 = {1, 23, 4, 6, 30, 39};
+
+    int [] inner2 = {2, 5, 10, 45, 4};
+    int [] outer2 = {1, 23, 4, 6, 30, 39, 1, 23, 4};
+
+    int [] inner3 = {2, 4, 2, 5};
+    int [] outer3 = {2, 4, 2};
 
 
 
@@ -135,7 +147,6 @@ public class UtilityTest{
      */
 
      @Test
-
      void testOnlyTens() throws IOException {
         assertTrue(Arrays.equals(onlyTensEquals, Utility.withoutTen(onlyTens)));
      }
@@ -146,7 +157,6 @@ public class UtilityTest{
      */
 
     @Test
-
     void testTensAtBeginning() throws IOException {
         assertTrue(Arrays.equals(tensAtBeginningEquals, Utility.withoutTen(tensAtBeginning)));
     }
@@ -157,7 +167,6 @@ public class UtilityTest{
      */
 
     @Test
-
     void testTensinMiddle() throws IOException {
        assertTrue(Arrays.equals(tensInMiddleEquals, Utility.withoutTen(tensInMiddle)));
     }
@@ -168,10 +177,57 @@ public class UtilityTest{
      */
 
     @Test
-
     void testTensinEnd() throws IOException {
        assertTrue(Arrays.equals(tensInEndEquals, Utility.withoutTen(tensInEnd)));
     }
+
+      /**
+     * Arrays - 7
+     * test if array is reversed
+     */
+
+    @Test
+    void testReverseArray() throws IOException {
+       assertTrue(Arrays.deepEquals(reverseArrayEquals, Utility.reverse(reverseArray)));
+    }
+
+     /**
+     * Arrays - 4
+     * test inner is in outer
+     */
+
+    @Test
+    void testInnerInOuter() throws IOException {
+       assertTrue(Utility.linearIn(outer1, inner1));
+    }
+
+     /**
+     * Arrays - 4
+     * test if inner is not in outer
+     */
+
+    @Test
+    void testInnerNotInOuter() throws IOException {
+        assertFalse(Utility.linearIn(outer2, inner2));
+    }
+
+    /**
+     * Arrays - 4
+     * inner larger than outer, but outer still has first couple of inner
+     */
+
+    @Test
+    void testLargerInner() throws IOException {
+        assertFalse(Utility.linearIn(outer3, inner3));
+    }
+
+
+  
+ 
+ 
+ 
+
+
      
 
 }
