@@ -6,8 +6,6 @@ import java.io.IOException;
 
 public class Utility {
     public static void main(String[] args) {
-        int [][] arrays = {{1, 4, 3}, {4, 3, 2}, {23, 3, 4}};
-        System.out.println(Arrays.deepToString(reverse(arrays)));
     }    
     
     public static String longestWord(String filenametxt) throws IOException{ // takes a file with words and outputs the longest word from it
