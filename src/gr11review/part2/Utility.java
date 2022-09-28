@@ -5,15 +5,9 @@ import java.util.*;
 import java.io.IOException;
 
 public class Utility {
-
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args) {
         
-        int [][] inner = {{1,2,3},{4,5,6},{7,8,9}};
-        System.out.println(Arrays.deepToString(reverse(inner)));
-
-    }
-
-    
+    }    
     
     public static String longestWord(String filenametxt) throws IOException{ // takes a file with words and outputs the longest word from it
         BufferedReader sc = new BufferedReader(new FileReader(filenametxt));
@@ -26,6 +20,7 @@ public class Utility {
 
         
         while ((stringFromFile = sc.readLine()) != null) { //until no words remain in file
+            stringFromFile = stringFromFile.strip();
             intCurrentLength = stringFromFile.length(); //current length is the length of the current parsed number
             
             if (intCurrentLength > intLastLength) { //if current length is longer than past longest word 
