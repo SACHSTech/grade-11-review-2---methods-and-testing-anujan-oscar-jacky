@@ -1,17 +1,12 @@
 package gr11review.part2;
 import java.io.*;
 import java.util.*;
-<<<<<<< HEAD
-
-=======
->>>>>>> 9cf5b1ee94aae3cf29b28453f8ecedc96777878f
 import java.io.IOException;
 
 public class Utility {
     public static void main(String[] args) {
     }    
 
-<<<<<<< HEAD
     /**
      * @param filenametxt
      * @return
@@ -157,7 +152,7 @@ public class Utility {
 
 
     
-=======
+
     public static int sumNumbers(String str) {
         int intSum = 0;
         String strEmpty = "";
@@ -175,7 +170,6 @@ public class Utility {
         }
     }
         return intSum;
->>>>>>> 9cf5b1ee94aae3cf29b28453f8ecedc96777878f
 }
 
 /* 
@@ -187,7 +181,7 @@ public class Utility {
         String str;
         char charFirst = str.charAt(0);
 
-        for (int i = 0; i < )
+        for (int i = 0; i < ) {}
     }*/
     public static int[] notAlone(int[] nums, int value) {
 
