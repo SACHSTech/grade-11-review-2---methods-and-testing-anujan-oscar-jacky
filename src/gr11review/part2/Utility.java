@@ -7,6 +7,13 @@ import java.io.IOException;
 public class Utility {
     public static void main(String[] args) {
     }    
+
+    /**
+     * @param filenametxt
+     * @return
+     * @throws IOException
+     * Inputs file into method and outputs longest word from it
+     */
     
     public static String longestWord(String filenametxt) throws IOException{ // takes a file with words and outputs the longest word from it
         BufferedReader sc = new BufferedReader(new FileReader(filenametxt));
@@ -31,6 +38,12 @@ public class Utility {
         return stringLongestWord; //return longest word      
     }
 
+    /**
+     * @param str
+     * @return
+     * Inputs string and outputs whether x's are "balanced" by the y's
+     */
+
 
     public static boolean xyBalance(String str) { //returns whether xy balance is obtained through array
         boolean booleanBalance = true; //will be true if x is not in list 
@@ -48,6 +61,12 @@ public class Utility {
         }
         return booleanBalance;
     }
+
+    /**
+     * @param nums
+     * @return
+     * Inputs an array, and outputs the same array but without the value 10
+     */
 
     public static int[] withoutTen(int[] nums) { //returns array without the value of 10
         List <Integer> listNumArray = new ArrayList <> ();
@@ -70,6 +89,13 @@ public class Utility {
         return arrayReturn;
 
     }
+
+    /**
+     * @param outer
+     * @param inner
+     * @return
+     * Inputs "inner" and "outer" array, and finds whether inner exists within outer
+     */
 
     public static boolean linearIn(int[] outer, int[] inner) {
         boolean booleanReturn = false; //default is false
@@ -101,6 +127,12 @@ public class Utility {
         return booleanReturn;
     }
 
+
+    /**
+     * @param arr
+     * @return
+     * Inputs 2d Array, and outputs the same array reversed
+     */
 
     public static int[][] reverse(int[][] arr) {
         int [][] intReturnArray = new int [arr.length][arr[0].length]; //have the return array have the same dimensions are the original
