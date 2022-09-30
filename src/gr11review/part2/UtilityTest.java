@@ -37,7 +37,7 @@ public class UtilityTest{
      * Test file with a single word in it
      */
     @Test
-    void testSingleWord() throws IOException{
+    void longestWordTest1() throws IOException{
         assertEquals("singleWord", Utility.longestWord("C:\\Users\\shan2\\Desktop\\grade-11-review-2---methods-and-testing-anujan-oscar-jacky\\bin\\singleWord.txt"));
     }
     
@@ -46,7 +46,7 @@ public class UtilityTest{
      * Test File with no words in it
      */
     @Test
-    void testNoWords() throws IOException{
+    void longestWordTest2() throws IOException{
         assertEquals("", Utility.longestWord("C:\\Users\\shan2\\Desktop\\grade-11-review-2---methods-and-testing-anujan-oscar-jacky\\bin\\noWords.txt"));
 
     }
@@ -56,7 +56,7 @@ public class UtilityTest{
      * Test file with longest word at the beginning of the file
      */
     @Test
-    void testBeginningOfFile() throws IOException{
+    void longestWordTest3() throws IOException{
         assertEquals("beginning", Utility.longestWord("C:\\Users\\shan2\\Desktop\\grade-11-review-2---methods-and-testing-anujan-oscar-jacky\\bin\\beginning.txt"));
     }
     
@@ -65,7 +65,7 @@ public class UtilityTest{
      * Test file with longest word in the middle of the file
      */
     @Test
-    void testMiddleOfFile() throws IOException{
+    void longestWordTest4() throws IOException{
         assertEquals("middle", Utility.longestWord("C:\\Users\\shan2\\Desktop\\grade-11-review-2---methods-and-testing-anujan-oscar-jacky\\bin\\middle.txt"));
     }
 
@@ -74,7 +74,7 @@ public class UtilityTest{
     * Test file with longest word at the end of the file
     */
     @Test
-    void testEndOfFile() throws IOException{
+    void longestWordTest5() throws IOException{
         assertEquals("end", Utility.longestWord("C:\\Users\\shan2\\Desktop\\grade-11-review-2---methods-and-testing-anujan-oscar-jacky\\bin\\end.txt"));
     }
 
@@ -83,7 +83,7 @@ public class UtilityTest{
     * Test file with longest word at the end of the file
     */
     @Test
-    void testMultiple() throws IOException{
+    void longestWordTest6() throws IOException{
         assertEquals("multiple", Utility.longestWord("C:\\Users\\shan2\\Desktop\\grade-11-review-2---methods-and-testing-anujan-oscar-jacky\\bin\\multiple.txt"));
     }
 
@@ -92,7 +92,7 @@ public class UtilityTest{
     * Test file where there are spaces
     */
     @Test
-    void testSpaces() throws IOException{
+    void longestWordTest7() throws IOException{
         assertEquals("spaces", Utility.longestWord("C:\\Users\\shan2\\Desktop\\grade-11-review-2---methods-and-testing-anujan-oscar-jacky\\bin\\spaces.txt"));
     }
 
@@ -101,7 +101,7 @@ public class UtilityTest{
     * test if balance is true when there is no string
     */
     @Test
-    void testBalanceNothing() throws IOException{
+    void xyBalanceTest1 () throws IOException{
         assertTrue(Utility.xyBalance(""));
     }
 
@@ -110,7 +110,7 @@ public class UtilityTest{
     * test when balance is not there
     */
     @Test
-    void testFalseBalance() throws IOException{
+    void xyBalanceTest2 () throws IOException{
         assertFalse(Utility.xyBalance("sdfyvyvyvyvxyxyxxyx"));
     }
 
@@ -119,7 +119,7 @@ public class UtilityTest{
     * test when balance true
     */
     @Test
-    void testTrueBalance() throws IOException{
+    void xyBalanceTest3() throws IOException{
         assertTrue(Utility.xyBalance("xyxyxyxyxxxxxxxxxxxxxy"));
     }
 
@@ -128,7 +128,7 @@ public class UtilityTest{
     * test without x or y
     */
     @Test
-    void testWithout() throws IOException{
+    void xyBalanceTest4() throws IOException{
         assertTrue(Utility.xyBalance("dsdsdfsdfsdfsdfdsfdsf"));
     }
 
@@ -137,7 +137,7 @@ public class UtilityTest{
     * test with only x
     */
     @Test
-    void testOnlyX() throws IOException{
+    void xyBalanceTest5() throws IOException{
         assertFalse(Utility.xyBalance("x"));
     }
 
@@ -147,7 +147,7 @@ public class UtilityTest{
      */
 
      @Test
-     void testOnlyTens() throws IOException {
+     void withoutTenTest1() throws IOException {
         assertTrue(Arrays.equals(onlyTensEquals, Utility.withoutTen(onlyTens)));
      }
 
@@ -157,7 +157,7 @@ public class UtilityTest{
      */
 
     @Test
-    void testTensAtBeginning() throws IOException {
+    void withoutTenTest2() throws IOException {
         assertTrue(Arrays.equals(tensAtBeginningEquals, Utility.withoutTen(tensAtBeginning)));
     }
 
@@ -167,7 +167,7 @@ public class UtilityTest{
      */
 
     @Test
-    void testTensinMiddle() throws IOException {
+    void withoutTenTest3() throws IOException {
        assertTrue(Arrays.equals(tensInMiddleEquals, Utility.withoutTen(tensInMiddle)));
     }
 
@@ -177,7 +177,7 @@ public class UtilityTest{
      */
 
     @Test
-    void testTensinEnd() throws IOException {
+    void withoutTenTest4() throws IOException {
        assertTrue(Arrays.equals(tensInEndEquals, Utility.withoutTen(tensInEnd)));
     }
 
@@ -187,7 +187,7 @@ public class UtilityTest{
      */
 
     @Test
-    void testReverseArray() throws IOException {
+    void reverseTest1() throws IOException {
        assertTrue(Arrays.deepEquals(reverseArrayEquals, Utility.reverse(reverseArray)));
     }
 
@@ -197,7 +197,7 @@ public class UtilityTest{
      */
 
     @Test
-    void testInnerInOuter() throws IOException {
+    void linearInTest1() throws IOException {
        assertTrue(Utility.linearIn(outer1, inner1));
     }
 
@@ -207,7 +207,7 @@ public class UtilityTest{
      */
 
     @Test
-    void testInnerNotInOuter() throws IOException {
+    void linearInTest2() throws IOException {
         assertFalse(Utility.linearIn(outer2, inner2));
     }
 
@@ -217,17 +217,9 @@ public class UtilityTest{
      */
 
     @Test
-    void testLargerInner() throws IOException {
+    void linearInTest3() throws IOException {
         assertFalse(Utility.linearIn(outer3, inner3));
     }
-
-
-  
- 
- 
- 
-
-
      
 
 }
