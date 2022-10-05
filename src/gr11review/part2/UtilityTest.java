@@ -9,6 +9,7 @@ import java.io.*;
 import java.util.*;
 
 public class UtilityTest{
+
     int [] onlyTens = {10, 10, 10, 10, 10};
     int [] onlyTensEquals = {};
     int [] tensAtBeginning = {10, 10, 10, 34, 34, 60, 234, 34};
