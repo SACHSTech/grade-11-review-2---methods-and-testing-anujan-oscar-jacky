@@ -17,7 +17,7 @@ public class UtilityTest{
      */
     @Test
     void xyzMiddleTest1() throws IOException{
-         assertTrue(Utility.xyzMiddle("sidbxyzshda"));
+         assertTrue(Utility.xyzMiddle("AAxyzBB"));
     }
       /**
      * Testing xyzMiddle difference of one
@@ -26,7 +26,7 @@ public class UtilityTest{
      */
     @Test
     public void xyzMiddleTest2() throws IOException{
-        assertTrue(Utility.xyzMiddle("POksxyzksl"));
+        assertTrue(Utility.xyzMiddle("AxyzBB"));
     }
           /**
      * Testing xyzMiddle capital
@@ -36,7 +36,7 @@ public class UtilityTest{
     
     @Test
     public void xyzMiddleTest3() throws IOException{
-        assertTrue(Utility.xyzMiddle("POSDJPXYZOASDJ9"));
+        assertTrue(Utility.xyzMiddle("AxyzBBB"));
     
     }
 
