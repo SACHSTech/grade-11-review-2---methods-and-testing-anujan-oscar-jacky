@@ -8,7 +8,7 @@ public class Utility {
     }    
 
     /**
-     * @param filenametxt
+     * @param filenametxt test file with words 
      * @return
      * @throws IOException
      * Inputs file into method and outputs longest word from it
@@ -38,7 +38,7 @@ public class Utility {
     }
 
     /**
-     * @param str
+     * @param str string teested to see whether x's and y's are balanced
      * @return
      * Inputs string and outputs whether x's are "balanced" by the y's
      */
@@ -62,7 +62,7 @@ public class Utility {
     }
 
     /**
-     * @param nums
+     * @param nums Array containung numbers
      * @return
      * Inputs an array, and outputs the same array but without the value 10
      */
@@ -90,8 +90,8 @@ public class Utility {
     }
 
     /**
-     * @param outer
-     * @param inner
+     * @param outer outer array of integers 
+     * @param inner inner array of integers to test whether it is contained in the outer array
      * @return
      * Inputs "inner" and "outer" array, and finds whether inner exists within outer
      */
@@ -128,7 +128,7 @@ public class Utility {
 
 
     /**
-     * @param arr
+     * @param arr 2D array which will be reversed 
      * @return
      * Inputs 2d Array, and outputs the same array reversed
      */
