@@ -39,5 +39,38 @@ public class UtilityTest{
         assertTrue(Utility.xyzMiddle("AxyzBBB"));
     
     }
+    /** 
+     * Testing vowelCountTest1 with words
+     */
 
+    public void vowelCountTest1() throws IOException{
+        assertEquals("words", Utility.vowelCount("/Users/jacky/github-classroom/SACHSTech/grade-11-review-2---methods-and-testing-anujan-oscar-jacky/src/gr11review/part2/words.txt"));
+
+    }
+    /** 
+     * Testing vowelCountTest2 with no words
+     */
+
+    public void vowelCountTest2() throws IOException{
+        assertEquals("nowords", Utility.vowelCount("/Users/jacky/github-classroom/SACHSTech/grade-11-review-2---methods-and-testing-anujan-oscar-jacky/src/gr11review/part2/nowords.txt"));
+        
+    }
+    /** 
+     * Testing vowelCountTest3 with random letters
+     */
+
+    public void vowelCountTest3() throws IOException{
+        assertEquals("random", Utility.vowelCount("/Users/jacky/github-classroom/SACHSTech/grade-11-review-2---methods-and-testing-anujan-oscar-jacky/src/gr11review/part2/random.txt"));
+
+    }
+
+    /** 
+     * Testing vowelCountTest4 with letters
+     */
+
+    public void vowelCountTest4() throws IOException{
+        assertEquals("letters", Utility.vowelCount("/Users/jacky/github-classroom/SACHSTech/grade-11-review-2---methods-and-testing-anujan-oscar-jacky/src/gr11review/part2/letters.txt"));
+
+
+    }
 }
