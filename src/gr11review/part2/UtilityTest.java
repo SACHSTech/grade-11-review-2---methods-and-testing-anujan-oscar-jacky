@@ -45,7 +45,7 @@ public class UtilityTest{
     
     @Test
     public void xyzMiddleTest3() throws IOException{
-        assertTrue(Utility.xyzMiddle("AxyzBBB"));
+        assertFalse(Utility.xyzMiddle("AxyzBBB"));
     
     }
     /** 
