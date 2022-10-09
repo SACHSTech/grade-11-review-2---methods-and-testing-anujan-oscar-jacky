@@ -67,25 +67,7 @@ public class UtilityTest{
      */
     @Test
     void alphaWord1 () throws IOException{
-        assertEquals("alphabet", Utility.alphaWord(""));
-    }
-
-    /**
-     * alphaWord Test 
-     * test random words in random alphabetical order 
-     */
-    @Test
-    void alphaWord2 () throws IOException{
-        assertEquals("alphabet", Utility.alphaWord(""));
-    }
-
-    /**
-     * alphaWord Test 
-     * test random words in random alphabetical order 
-     */
-    @Test
-    void alphaWord3 () throws IOException{
-        assertEquals("alphabet", Utility.alphaWord(""));
+        assertEquals("adipiscing", Utility.alphaWord("/Users/tobbykin/github-classroom/SACHSTech/grade-11-review-2---methods-and-testing-anujan-oscar-jacky/src/gr11review/part2/words"));
     }
 
     /**
