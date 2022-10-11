@@ -76,7 +76,7 @@ public class Utility {
      */
     public static int[] zeroFront(int[] nums) {
         int intUpdate = 0;
- 
+        
         for (int i = 0; i < nums.length; i++) {
 
             if (nums[i] == 0) {
@@ -113,10 +113,9 @@ public class Utility {
         // loop through numbers until n
         for (int i = 1; i <= n; i++) {
  
-            // iterate through loop until i
+            // loop until i
             for (int j = 1; j <= i; j++) {
  
-                // array equal to j
                 newArray[intCounter++] = j;
             }
         }

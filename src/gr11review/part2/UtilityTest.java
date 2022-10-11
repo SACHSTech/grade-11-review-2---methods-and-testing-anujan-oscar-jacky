@@ -7,6 +7,7 @@ import gr11review.part2.Utility;
 
 import java.io.IOError;
 import java.io.IOException;
+import java.util.Arrays;
 
 public class UtilityTest{
 
@@ -21,8 +22,6 @@ public class UtilityTest{
 
     /**
      * Testing xyzMiddle 
-     * 
-     * @author J. Wang
      */
     @Test
     void xyzMiddleTest1() throws IOException{
@@ -30,17 +29,14 @@ public class UtilityTest{
     }
       /**
      * Testing xyzMiddle difference of one
-     * 
-     * @author J. Wang
      */
+
     @Test
     public void xyzMiddleTest2() throws IOException{
         assertTrue(Utility.xyzMiddle("AxyzBB"));
     }
           /**
-     * Testing xyzMiddle capital
-     * 
-     * @author J. Wang
+     * Testing xyzMiddle with capital letters
      */
     
     @Test
@@ -49,39 +45,33 @@ public class UtilityTest{
     
     }
     /** 
-     * Testing vowelCountTest1 with words
+     * Testing vowelCount with words
      */
 
+    @Test
     public void vowelCountTest1() throws IOException{
-        assertEquals("words", Utility.vowelCount("/Users/jacky/github-classroom/SACHSTech/grade-11-review-2---methods-and-testing-anujan-oscar-jacky/src/gr11review/part2/words.txt"));
+        assertEquals("consectetur", Utility.vowelCount("/Users/jacky/github-classroom/SACHSTech/grade-11-review-2---methods-and-testing-anujan-oscar-jacky/src/gr11review/part2/words.txt"));
 
     }
     /** 
-     * Testing vowelCountTest2 with no words
+     * Testing vowelCount with no words
      */
 
+    @Test
     public void vowelCountTest2() throws IOException{
-        assertEquals("nowords", Utility.vowelCount("/Users/jacky/github-classroom/SACHSTech/grade-11-review-2---methods-and-testing-anujan-oscar-jacky/src/gr11review/part2/nowords.txt"));
+        assertEquals("", Utility.vowelCount("/Users/jacky/github-classroom/SACHSTech/grade-11-review-2---methods-and-testing-anujan-oscar-jacky/src/gr11review/part2/nowords.txt"));
         
     }
     /** 
-     * Testing vowelCountTest3 with random letters
+     * Testing vowelCount with random letters
      */
-
+    
+    @Test
     public void vowelCountTest3() throws IOException{
-        assertEquals("random", Utility.vowelCount("/Users/jacky/github-classroom/SACHSTech/grade-11-review-2---methods-and-testing-anujan-oscar-jacky/src/gr11review/part2/random.txt"));
+        assertEquals("oebideai", Utility.vowelCount("/Users/jacky/github-classroom/SACHSTech/grade-11-review-2---methods-and-testing-anujan-oscar-jacky/src/gr11review/part2/random.txt"));
 
     }
 
-    /** 
-     * Testing vowelCountTest4 with letters
-     */
-
-    public void vowelCountTest4() throws IOException{
-        assertEquals("letters", Utility.vowelCount("/Users/jacky/github-classroom/SACHSTech/grade-11-review-2---methods-and-testing-anujan-oscar-jacky/src/gr11review/part2/letters.txt"));
-
-
-    }
    /**
      * Arrays 1D - 3
      * four numbers
@@ -89,7 +79,7 @@ public class UtilityTest{
 
     @Test
     void zeroFrontTest1() throws IOException {
-       assertArrayEquals(fourNumbers, Utility.zeroFront(fourNumbers));
+       assertTrue(Arrays.equals(fourNumbers, Utility.zeroFront(fourNumbers)));
 
     }
     /**
@@ -99,7 +89,7 @@ public class UtilityTest{
 
     @Test
     void zeroFrontTest2() throws IOException {
-       assertArrayEquals(fiveNumbers, Utility.zeroFront(fiveNumbers));
+       assertTrue(Arrays.equals(fiveNumbers, Utility.zeroFront(fiveNumbers)));
     }
 
     /**
@@ -109,7 +99,7 @@ public class UtilityTest{
 
     @Test
     void zeroFrontTest3() throws IOException {
-       assertArrayEquals(sixNumbers, Utility.zeroFront(sixNumbers));
+       assertTrue(Arrays.equals(sixNumbers, Utility.zeroFront(sixNumbers)));
 
     }
 
@@ -120,7 +110,7 @@ public class UtilityTest{
 
     @Test
     void zeroFrontTest4() throws IOException {
-       assertArrayEquals(twoNumbers, Utility.zeroFront(twoNumbers));
+       assertTrue(Arrays.equals(twoNumbers, Utility.zeroFront(twoNumbers)));
     }
 
     /**
@@ -154,6 +144,17 @@ public class UtilityTest{
 
         int[] arrayExpected = {1, 1, 2};
         assertArrayEquals(arrayExpected, Utility.seriesUp(2));
+    }
+
+    /**
+     * seriesUp test 4
+     * numbers up to 7
+     */
+    @Test
+    public void seriesUpTest4() {
+
+        int[] arrayExpected = {1, 1, 2, 1, 2, 3, 1, 2, 3, 4, 1, 2, 3, 4, 5, 1 ,2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6, 7};
+        assertArrayEquals(arrayExpected, Utility.seriesUp(7));
     }
 
     /**
