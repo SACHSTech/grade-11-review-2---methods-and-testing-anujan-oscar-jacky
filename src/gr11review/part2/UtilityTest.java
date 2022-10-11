@@ -3,9 +3,6 @@ package gr11review.part2;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
-import gr11review.part2.Utility;
-
-import java.io.IOError;
 import java.io.IOException;
 import java.util.Arrays;
 
@@ -65,7 +62,7 @@ public class UtilityTest{
     /** 
      * Testing vowelCount with random letters
      */
-    
+
     @Test
     public void vowelCountTest3() throws IOException{
         assertEquals("oebideai", Utility.vowelCount("/Users/jacky/github-classroom/SACHSTech/grade-11-review-2---methods-and-testing-anujan-oscar-jacky/src/gr11review/part2/random.txt"));
